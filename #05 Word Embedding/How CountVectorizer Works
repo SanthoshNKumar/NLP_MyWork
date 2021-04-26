@@ -1,0 +1,21 @@
+mess = ['The sun is shining',
+        'The weather is sweet',
+        'The sun is shining and the weather is sweet']
+
+Step1 : Remove the punctuation and stop words
+	       vocabulary_ : {'sun': 1, 'shining': 0, 'weather': 3, 'sweet': 2}
+
+Step 2: Above the text look like
+        mess = ['sun shining',
+	              'weather sweet',
+	              'sun shining weather sweet']
+Step 3:
+        Total number of unique words(vocabulary) is 4 and number of rows 3
+
+So the countervectorizer be like (3 x 4)
+
+Final vector = 
+              [[1 1 0 0]
+               [0 0 1 1]
+               [1 1 1 1]]
+
