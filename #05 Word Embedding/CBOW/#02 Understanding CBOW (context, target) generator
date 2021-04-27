@@ -1,0 +1,804 @@
+['beginning', 'god', 'created', 'heaven', 'earth']
+sentence_length: 5
+WindowSize: 2
+index: 0
+Word at index 0 : 'beginning'
+start = index - window_size
+end = index + window_size + 1
+
+start: -2
+end: 3
+
+Choosing context word based on condition:
+[-2, -1, 0, 1, 2]
+range index: -2
+range index: -1
+
+range index: 0
+Statisfied the condition '0 <= i' 
+Statisfied the condition 'i < sentence_length' 
+
+range index: 1
+Statisfied the condition '0 <= i' 
+Statisfied the condition 'i < sentence_length' 
+Statisfied the condition 'i != index'
+Selected Word: 'god'
+Word at range index at 1 is 'god'
+
+range index: 2
+Statisfied the condition '0 <= i' 
+Statisfied the condition 'i < sentence_length' 
+Statisfied the condition 'i != index'
+Selected Word: 'created'
+Word at range index at 2 is 'created'
+
+Input: ['god', 'created']
+Output: beginning
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+context_words : ['god', 'created']
+*****************************
+sentence_length: 5
+WindowSize: 2
+index: 1
+Word at index 1 : 'god'
+start = index - window_size
+end = index + window_size + 1
+
+start: -1
+end: 4
+
+Choosing context word based on condition:
+[-1, 0, 1, 2, 3]
+range index: -1
+range index: 0
+
+Statisfied the condition '0 <= i' 
+Statisfied the condition 'i < sentence_length' 
+Statisfied the condition 'i != index'
+Selected Word: 'beginning'
+Word at range index at 0 is 'beginning'
+
+range index: 1
+Statisfied the condition '0 <= i' 
+Statisfied the condition 'i < sentence_length' 
+
+range index: 2
+Statisfied the condition '0 <= i' 
+Statisfied the condition 'i < sentence_length' 
+Statisfied the condition 'i != index'
+Selected Word: 'created'
+Word at range index at 2 is 'created'
+
+range index: 3
+Statisfied the condition '0 <= i' 
+Statisfied the condition 'i < sentence_length' 
+Statisfied the condition 'i != index'
+Selected Word: 'heaven'
+
+Word at range index at 3 is 'heaven'
+Input: ['beginning', 'created', 'heaven']
+Output: god
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+context_words : ['beginning', 'created', 'heaven']
+context_words1 : [['beginning', 'created', 'heaven']]
+*****************************
+sentence_length: 5
+WindowSize: 2
+index: 2
+Word at index 2 : 'created'
+start = index - window_size
+end = index + window_size + 1
+start: 0
+end: 5
+Choosing context word based on condition:
+[0, 1, 2, 3, 4]
+
+range index: 0
+Statisfied the condition '0 <= i' 
+Statisfied the condition 'i < sentence_length' 
+Statisfied the condition 'i != index'
+Selected Word: 'beginning'
+Word at range index at 0 is 'beginning'
+
+range index: 1
+Statisfied the condition '0 <= i' 
+Statisfied the condition 'i < sentence_length' 
+Statisfied the condition 'i != index'
+Selected Word: 'god'
+Word at range index at 1 is 'god'
+
+range index: 2
+Statisfied the condition '0 <= i' 
+Statisfied the condition 'i < sentence_length' 
+
+range index: 3
+Statisfied the condition '0 <= i' 
+Statisfied the condition 'i < sentence_length' 
+Statisfied the condition 'i != index'
+Selected Word: 'heaven'
+Word at range index at 3 is 'heaven'
+
+range index: 4
+Statisfied the condition '0 <= i' 
+Statisfied the condition 'i < sentence_length' 
+Statisfied the condition 'i != index'
+Selected Word: 'earth'
+
+Word at range index at 4 is 'earth'
+Input: ['beginning', 'god', 'heaven', 'earth']
+Output: created
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+context_words : ['beginning', 'god', 'heaven', 'earth']
+context_words1 : [['beginning', 'god', 'heaven', 'earth']]
+*****************************
+sentence_length: 5
+WindowSize: 2
+index: 3
+Word at index 3 : 'heaven'
+start = index - window_size
+end = index + window_size + 1
+start: 1
+end: 6
+Choosing context word based on condition:
+[1, 2, 3, 4, 5]
+
+range index: 1
+Statisfied the condition '0 <= i' 
+Statisfied the condition 'i < sentence_length' 
+Statisfied the condition 'i != index'
+Selected Word: 'god'
+Word at range index at 1 is 'god'
+
+range index: 2
+Statisfied the condition '0 <= i' 
+Statisfied the condition 'i < sentence_length' 
+Statisfied the condition 'i != index'
+Selected Word: 'created'
+Word at range index at 2 is 'created'
+range index: 3
+
+Statisfied the condition '0 <= i' 
+Statisfied the condition 'i < sentence_length' 
+
+range index: 4
+Statisfied the condition '0 <= i' 
+Statisfied the condition 'i < sentence_length' 
+Statisfied the condition 'i != index'
+Selected Word: 'earth'
+Word at range index at 4 is 'earth'
+
+range index: 5
+Statisfied the condition '0 <= i' 
+Input: ['god', 'created', 'earth']
+Output: heaven
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+context_words : ['god', 'created', 'earth']
+context_words1 : [['god', 'created', 'earth']]
+*****************************
+sentence_length: 5
+WindowSize: 2
+index: 4
+Word at index 4 : 'earth'
+start = index - window_size
+end = index + window_size + 1
+start: 2
+end: 7
+Choosing context word based on condition:
+[2, 3, 4, 5, 6]
+
+range index: 2
+Statisfied the condition '0 <= i' 
+Statisfied the condition 'i < sentence_length' 
+Statisfied the condition 'i != index'
+Selected Word: 'created'
+Word at range index at 2 is 'created'
+
+range index: 3
+Statisfied the condition '0 <= i' 
+Statisfied the condition 'i < sentence_length' 
+Statisfied the condition 'i != index'
+Selected Word: 'heaven'
+Word at range index at 3 is 'heaven'
+
+range index: 4
+Statisfied the condition '0 <= i' 
+Statisfied the condition 'i < sentence_length' 
+
+range index: 5
+Statisfied the condition '0 <= i' 
+
+range index: 6
+Statisfied the condition '0 <= i' 
+Input: ['created', 'heaven']
+Output: earth
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+context_words : ['created', 'heaven']
+
+
+###############################################################################
+['earth', 'without', 'form', 'void', 'darkness', 'upon', 'face', 'deep']
+sentence_length: 8
+WindowSize: 2
+index: 0
+Word at index 0 : 'earth'
+start = index - window_size
+end = index + window_size + 1
+
+start: -2
+end: 3
+
+Choosing context word based on condition:
+[-2, -1, 0, 1, 2]
+
+range index: -2
+range index: -1
+
+range index: 0
+Statisfied the condition '0 <= i' 
+Statisfied the condition 'i < sentence_length' 
+
+range index: 1
+Statisfied the condition '0 <= i' 
+Statisfied the condition 'i < sentence_length' 
+Statisfied the condition 'i != index'
+Selected Word: 'without'
+Word at range index at 1 is 'without'
+
+range index: 2
+Statisfied the condition '0 <= i' 
+Statisfied the condition 'i < sentence_length' 
+Statisfied the condition 'i != index'
+
+Selected Word: 'form'
+
+Word at range index at 2 is 'form'
+Input: ['without', 'form']
+Output: earth
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+context_words : ['without', 'form']
+
+sentence_length: 8
+WindowSize: 2
+index: 1
+Word at index 1 : 'without'
+start = index - window_size
+end = index + window_size + 1
+start: -1
+end: 4
+Choosing context word based on condition:
+[-1, 0, 1, 2, 3]
+
+range index: -1
+range index: 0
+Statisfied the condition '0 <= i' 
+Statisfied the condition 'i < sentence_length' 
+Statisfied the condition 'i != index'
+Selected Word: 'earth'
+Word at range index at 0 is 'earth'
+
+range index: 1
+Statisfied the condition '0 <= i' 
+Statisfied the condition 'i < sentence_length' 
+
+range index: 2
+Statisfied the condition '0 <= i' 
+Statisfied the condition 'i < sentence_length' 
+Statisfied the condition 'i != index'
+Selected Word: 'form'
+Word at range index at 2 is 'form'
+
+range index: 3
+Statisfied the condition '0 <= i' 
+Statisfied the condition 'i < sentence_length' 
+Statisfied the condition 'i != index'
+Selected Word: 'void'
+
+Word at range index at 3 is 'void'
+Input: ['earth', 'form', 'void']
+Output: without
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+context_words : ['earth', 'form', 'void']
+context_words1 : [['earth', 'form', 'void']]
+*****************************
+sentence_length: 8
+WindowSize: 2
+index: 2
+Word at index 2 : 'form'
+start = index - window_size
+end = index + window_size + 1
+
+start: 0
+end: 5
+
+Choosing context word based on condition:
+[0, 1, 2, 3, 4]
+range index: 0
+Statisfied the condition '0 <= i' 
+Statisfied the condition 'i < sentence_length' 
+Statisfied the condition 'i != index'
+Selected Word: 'earth'
+Word at range index at 0 is 'earth'
+
+range index: 1
+Statisfied the condition '0 <= i' 
+Statisfied the condition 'i < sentence_length' 
+Statisfied the condition 'i != index'
+Selected Word: 'without'
+Word at range index at 1 is 'without'
+
+range index: 2
+Statisfied the condition '0 <= i' 
+Statisfied the condition 'i < sentence_length' 
+
+range index: 3
+Statisfied the condition '0 <= i' 
+Statisfied the condition 'i < sentence_length' 
+Statisfied the condition 'i != index'
+Selected Word: 'void'
+Word at range index at 3 is 'void'
+
+range index: 4
+Statisfied the condition '0 <= i' 
+Statisfied the condition 'i < sentence_length' 
+Statisfied the condition 'i != index'
+Selected Word: 'darkness'
+Word at range index at 4 is 'darkness'
+
+Input: ['earth', 'without', 'void', 'darkness']
+Output: form
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+context_words : ['earth', 'without', 'void', 'darkness']
+context_words1 : [['earth', 'without', 'void', 'darkness']]
+*****************************
+sentence_length: 8
+WindowSize: 2
+index: 3
+Word at index 3 : 'void'
+start = index - window_size
+end = index + window_size + 1
+
+start: 1
+end: 6
+
+Choosing context word based on condition:
+[1, 2, 3, 4, 5]
+range index: 1
+Statisfied the condition '0 <= i' 
+Statisfied the condition 'i < sentence_length' 
+Statisfied the condition 'i != index'
+Selected Word: 'without'
+Word at range index at 1 is 'without'
+
+range index: 2
+Statisfied the condition '0 <= i' 
+Statisfied the condition 'i < sentence_length' 
+Statisfied the condition 'i != index'
+Selected Word: 'form'
+Word at range index at 2 is 'form'
+
+range index: 3
+Statisfied the condition '0 <= i' 
+Statisfied the condition 'i < sentence_length' 
+
+range index: 4
+Statisfied the condition '0 <= i' 
+Statisfied the condition 'i < sentence_length' 
+Statisfied the condition 'i != index'
+Selected Word: 'darkness'
+Word at range index at 4 is 'darkness'
+
+range index: 5
+Statisfied the condition '0 <= i' 
+Statisfied the condition 'i < sentence_length' 
+Statisfied the condition 'i != index'
+
+Selected Word: 'upon'
+Word at range index at 5 is 'upon'
+
+Input: ['without', 'form', 'darkness', 'upon']
+Output: void
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+context_words : ['without', 'form', 'darkness', 'upon']
+
+*****************************
+sentence_length: 8
+WindowSize: 2
+index: 4
+Word at index 4 : 'darkness'
+start = index - window_size
+end = index + window_size + 1
+
+start: 2
+end: 7
+
+Choosing context word based on condition:
+[2, 3, 4, 5, 6]
+range index: 2
+Statisfied the condition '0 <= i' 
+Statisfied the condition 'i < sentence_length' 
+Statisfied the condition 'i != index'
+Selected Word: 'form'
+Word at range index at 2 is 'form'
+
+range index: 3
+Statisfied the condition '0 <= i' 
+Statisfied the condition 'i < sentence_length' 
+Statisfied the condition 'i != index'
+Selected Word: 'void'
+Word at range index at 3 is 'void'
+
+range index: 4
+Statisfied the condition '0 <= i' 
+Statisfied the condition 'i < sentence_length' 
+
+range index: 5
+Statisfied the condition '0 <= i' 
+Statisfied the condition 'i < sentence_length' 
+Statisfied the condition 'i != index'
+Selected Word: 'upon'
+Word at range index at 5 is 'upon'
+
+range index: 6
+Statisfied the condition '0 <= i' 
+Statisfied the condition 'i < sentence_length' 
+Statisfied the condition 'i != index'
+Selected Word: 'face'
+Word at range index at 6 is 'face'
+
+Input: ['form', 'void', 'upon', 'face']
+Output: darkness
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+context_words : ['form', 'void', 'upon', 'face']
+context_words1 : [['form', 'void', 'upon', 'face']]
+*****************************
+sentence_length: 8
+WindowSize: 2
+index: 5
+Word at index 5 : 'upon'
+start = index - window_size
+end = index + window_size + 1
+start: 3
+end: 8
+Choosing context word based on condition:
+[3, 4, 5, 6, 7]
+range index: 3
+Statisfied the condition '0 <= i' 
+Statisfied the condition 'i < sentence_length' 
+Statisfied the condition 'i != index'
+Selected Word: 'void'
+Word at range index at 3 is 'void'
+range index: 4
+Statisfied the condition '0 <= i' 
+Statisfied the condition 'i < sentence_length' 
+Statisfied the condition 'i != index'
+Selected Word: 'darkness'
+Word at range index at 4 is 'darkness'
+range index: 5
+Statisfied the condition '0 <= i' 
+Statisfied the condition 'i < sentence_length' 
+range index: 6
+Statisfied the condition '0 <= i' 
+Statisfied the condition 'i < sentence_length' 
+Statisfied the condition 'i != index'
+Selected Word: 'face'
+Word at range index at 6 is 'face'
+range index: 7
+Statisfied the condition '0 <= i' 
+Statisfied the condition 'i < sentence_length' 
+Statisfied the condition 'i != index'
+Selected Word: 'deep'
+Word at range index at 7 is 'deep'
+Input: ['void', 'darkness', 'face', 'deep']
+Output: upon
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+context_words : ['void', 'darkness', 'face', 'deep']
+context_words1 : [['void', 'darkness', 'face', 'deep']]
+*****************************
+sentence_length: 8
+WindowSize: 2
+index: 6
+Word at index 6 : 'face'
+start = index - window_size
+end = index + window_size + 1
+start: 4
+end: 9
+Choosing context word based on condition:
+[4, 5, 6, 7, 8]
+range index: 4
+Statisfied the condition '0 <= i' 
+Statisfied the condition 'i < sentence_length' 
+Statisfied the condition 'i != index'
+Selected Word: 'darkness'
+Word at range index at 4 is 'darkness'
+range index: 5
+Statisfied the condition '0 <= i' 
+Statisfied the condition 'i < sentence_length' 
+Statisfied the condition 'i != index'
+Selected Word: 'upon'
+Word at range index at 5 is 'upon'
+range index: 6
+Statisfied the condition '0 <= i' 
+Statisfied the condition 'i < sentence_length' 
+range index: 7
+Statisfied the condition '0 <= i' 
+Statisfied the condition 'i < sentence_length' 
+Statisfied the condition 'i != index'
+Selected Word: 'deep'
+Word at range index at 7 is 'deep'
+range index: 8
+Statisfied the condition '0 <= i' 
+Input: ['darkness', 'upon', 'deep']
+Output: face
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+context_words : ['darkness', 'upon', 'deep']
+context_words1 : [['darkness', 'upon', 'deep']]
+*****************************
+sentence_length: 8
+WindowSize: 2
+index: 7
+Word at index 7 : 'deep'
+start = index - window_size
+end = index + window_size + 1
+start: 5
+end: 10
+Choosing context word based on condition:
+[5, 6, 7, 8, 9]
+range index: 5
+Statisfied the condition '0 <= i' 
+Statisfied the condition 'i < sentence_length' 
+Statisfied the condition 'i != index'
+Selected Word: 'upon'
+Word at range index at 5 is 'upon'
+range index: 6
+Statisfied the condition '0 <= i' 
+Statisfied the condition 'i < sentence_length' 
+Statisfied the condition 'i != index'
+Selected Word: 'face'
+Word at range index at 6 is 'face'
+range index: 7
+Statisfied the condition '0 <= i' 
+Statisfied the condition 'i < sentence_length' 
+range index: 8
+Statisfied the condition '0 <= i' 
+range index: 9
+Statisfied the condition '0 <= i' 
+Input: ['upon', 'face']
+Output: deep
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+context_words : ['upon', 'face']
+context_words1 : [['upon', 'face']]
+*****************************
+###############################################################################
+['spirit', 'god', 'moved', 'upon', 'face', 'waters']
+sentence_length: 6
+WindowSize: 2
+index: 0
+Word at index 0 : 'spirit'
+start = index - window_size
+end = index + window_size + 1
+start: -2
+end: 3
+Choosing context word based on condition:
+[-2, -1, 0, 1, 2]
+range index: -2
+range index: -1
+range index: 0
+Statisfied the condition '0 <= i' 
+Statisfied the condition 'i < sentence_length' 
+range index: 1
+Statisfied the condition '0 <= i' 
+Statisfied the condition 'i < sentence_length' 
+Statisfied the condition 'i != index'
+Selected Word: 'god'
+Word at range index at 1 is 'god'
+range index: 2
+Statisfied the condition '0 <= i' 
+Statisfied the condition 'i < sentence_length' 
+Statisfied the condition 'i != index'
+Selected Word: 'moved'
+Word at range index at 2 is 'moved'
+Input: ['god', 'moved']
+Output: spirit
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+context_words : ['god', 'moved']
+context_words1 : [['god', 'moved']]
+*****************************
+sentence_length: 6
+WindowSize: 2
+index: 1
+Word at index 1 : 'god'
+start = index - window_size
+end = index + window_size + 1
+start: -1
+end: 4
+Choosing context word based on condition:
+[-1, 0, 1, 2, 3]
+range index: -1
+range index: 0
+Statisfied the condition '0 <= i' 
+Statisfied the condition 'i < sentence_length' 
+Statisfied the condition 'i != index'
+Selected Word: 'spirit'
+Word at range index at 0 is 'spirit'
+range index: 1
+Statisfied the condition '0 <= i' 
+Statisfied the condition 'i < sentence_length' 
+range index: 2
+Statisfied the condition '0 <= i' 
+Statisfied the condition 'i < sentence_length' 
+Statisfied the condition 'i != index'
+Selected Word: 'moved'
+Word at range index at 2 is 'moved'
+range index: 3
+Statisfied the condition '0 <= i' 
+Statisfied the condition 'i < sentence_length' 
+Statisfied the condition 'i != index'
+Selected Word: 'upon'
+Word at range index at 3 is 'upon'
+Input: ['spirit', 'moved', 'upon']
+Output: god
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+context_words : ['spirit', 'moved', 'upon']
+context_words1 : [['spirit', 'moved', 'upon']]
+*****************************
+sentence_length: 6
+WindowSize: 2
+index: 2
+Word at index 2 : 'moved'
+start = index - window_size
+end = index + window_size + 1
+start: 0
+end: 5
+Choosing context word based on condition:
+[0, 1, 2, 3, 4]
+range index: 0
+Statisfied the condition '0 <= i' 
+Statisfied the condition 'i < sentence_length' 
+Statisfied the condition 'i != index'
+Selected Word: 'spirit'
+Word at range index at 0 is 'spirit'
+range index: 1
+Statisfied the condition '0 <= i' 
+Statisfied the condition 'i < sentence_length' 
+Statisfied the condition 'i != index'
+Selected Word: 'god'
+Word at range index at 1 is 'god'
+range index: 2
+Statisfied the condition '0 <= i' 
+Statisfied the condition 'i < sentence_length' 
+range index: 3
+Statisfied the condition '0 <= i' 
+Statisfied the condition 'i < sentence_length' 
+Statisfied the condition 'i != index'
+Selected Word: 'upon'
+Word at range index at 3 is 'upon'
+range index: 4
+Statisfied the condition '0 <= i' 
+Statisfied the condition 'i < sentence_length' 
+Statisfied the condition 'i != index'
+Selected Word: 'face'
+Word at range index at 4 is 'face'
+Input: ['spirit', 'god', 'upon', 'face']
+Output: moved
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+context_words : ['spirit', 'god', 'upon', 'face']
+context_words1 : [['spirit', 'god', 'upon', 'face']]
+*****************************
+sentence_length: 6
+WindowSize: 2
+index: 3
+Word at index 3 : 'upon'
+start = index - window_size
+end = index + window_size + 1
+start: 1
+end: 6
+Choosing context word based on condition:
+[1, 2, 3, 4, 5]
+range index: 1
+Statisfied the condition '0 <= i' 
+Statisfied the condition 'i < sentence_length' 
+Statisfied the condition 'i != index'
+Selected Word: 'god'
+Word at range index at 1 is 'god'
+range index: 2
+Statisfied the condition '0 <= i' 
+Statisfied the condition 'i < sentence_length' 
+Statisfied the condition 'i != index'
+Selected Word: 'moved'
+Word at range index at 2 is 'moved'
+range index: 3
+Statisfied the condition '0 <= i' 
+Statisfied the condition 'i < sentence_length' 
+range index: 4
+Statisfied the condition '0 <= i' 
+Statisfied the condition 'i < sentence_length' 
+Statisfied the condition 'i != index'
+Selected Word: 'face'
+Word at range index at 4 is 'face'
+range index: 5
+Statisfied the condition '0 <= i' 
+Statisfied the condition 'i < sentence_length' 
+Statisfied the condition 'i != index'
+Selected Word: 'waters'
+Word at range index at 5 is 'waters'
+Input: ['god', 'moved', 'face', 'waters']
+Output: upon
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+context_words : ['god', 'moved', 'face', 'waters']
+context_words1 : [['god', 'moved', 'face', 'waters']]
+*****************************
+sentence_length: 6
+WindowSize: 2
+index: 4
+Word at index 4 : 'face'
+start = index - window_size
+end = index + window_size + 1
+start: 2
+end: 7
+Choosing context word based on condition:
+[2, 3, 4, 5, 6]
+range index: 2
+Statisfied the condition '0 <= i' 
+Statisfied the condition 'i < sentence_length' 
+Statisfied the condition 'i != index'
+Selected Word: 'moved'
+Word at range index at 2 is 'moved'
+range index: 3
+Statisfied the condition '0 <= i' 
+Statisfied the condition 'i < sentence_length' 
+Statisfied the condition 'i != index'
+Selected Word: 'upon'
+Word at range index at 3 is 'upon'
+range index: 4
+Statisfied the condition '0 <= i' 
+Statisfied the condition 'i < sentence_length' 
+range index: 5
+Statisfied the condition '0 <= i' 
+Statisfied the condition 'i < sentence_length' 
+Statisfied the condition 'i != index'
+Selected Word: 'waters'
+Word at range index at 5 is 'waters'
+range index: 6
+Statisfied the condition '0 <= i' 
+Input: ['moved', 'upon', 'waters']
+Output: face
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+context_words : ['moved', 'upon', 'waters']
+context_words1 : [['moved', 'upon', 'waters']]
+*****************************
+sentence_length: 6
+WindowSize: 2
+index: 5
+Word at index 5 : 'waters'
+start = index - window_size
+end = index + window_size + 1
+start: 3
+end: 8
+Choosing context word based on condition:
+[3, 4, 5, 6, 7]
+range index: 3
+Statisfied the condition '0 <= i' 
+Statisfied the condition 'i < sentence_length' 
+Statisfied the condition 'i != index'
+Selected Word: 'upon'
+Word at range index at 3 is 'upon'
+range index: 4
+Statisfied the condition '0 <= i' 
+Statisfied the condition 'i < sentence_length' 
+Statisfied the condition 'i != index'
+Selected Word: 'face'
+Word at range index at 4 is 'face'
+range index: 5
+Statisfied the condition '0 <= i' 
+Statisfied the condition 'i < sentence_length' 
+range index: 6
+Statisfied the condition '0 <= i' 
+range index: 7
+Statisfied the condition '0 <= i' 
+Input: ['upon', 'face']
+Output: waters
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+context_words : ['upon', 'face']
+context_words1 : [['upon', 'face']]
+*****************************
+###############################################################################
